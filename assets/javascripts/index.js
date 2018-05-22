@@ -17,6 +17,7 @@ const createShapeElement = (shape) => {
 
 const shapes = [
   'circle',
+  'frame',
   'hexagon',
   'heptagon',
   'triangle',
@@ -30,6 +31,13 @@ const shapes = [
   'square'
 ];
 
-var canvas = document.getElementById('canvas');
+const draw = () => {
+  var canvas = document.getElementById('canvas');
+  while (canvas.children.length > 0) {
+    canvas.removeChild(canvas.lastChild);
+  }
+  canvas.appendChild(createShapeElement(sample(shapes)));
+  setTimeout(() => window.requestAnimationFrame(draw), 1000);
+};
 
-canvas.appendChild(createShapeElement(sample(shapes)));
+draw();

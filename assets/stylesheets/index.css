@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
 
-:root {
-  --stripe-size: 6px;
-  --square-size: 700px;
-  --shape-size: 400px;
-  --border-size: 404px;
-}
-
 * { margin: 0; padding: 0; }
 
 body {
@@ -20,31 +13,35 @@ body {
 .canvas {
   border: 2px solid #fff;
   display: flex;
-  height: var(--square-size);
+  height: 648px;
   justify-content: center;
   position: relative;
-  width: var(--square-size);
+  width: 648px;
 }
 
 .shape {
-  height: var(--shape-size);
+  height: 400px;
   position: absolute;
-  width: var(--shape-size);
-  top: 157px;
+  width: 397px;
+  top: 132.5px;
   z-index: 1;
 }
 
 .shape--border {
-  top: 155px;
+  top: 131px;
   background: #fff;
-  height: var(--border-size);
+  height: 402.5px;
   position: absolute;
-  width: var(--border-size);
+  width: 400px;
   z-index: 0;
 }
 
 .shape--circle {
   clip-path: circle(50% at 50% 50%);
+}
+
+.shape--frame {
+  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
 }
 
 .shape--decagon {
@@ -99,7 +96,7 @@ body {
     #fff 20%,
     #fff
   );
-  background-size: 100% var(--stripe-size);
+  background-size: 100% 6px;
 }
 
 .stripes--vertical {
@@ -110,7 +107,7 @@ body {
     #fff 20%,
     #fff
   );
-  background-size: var(--stripe-size) 100%;
+  background-size: 6px 100%;
 }
 
 header,
