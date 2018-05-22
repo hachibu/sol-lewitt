@@ -22,10 +22,10 @@ body {
 }
 
 .shape {
-  height: 401px;
+  height: 399px;
   position: absolute;
   left: 131.5px;
-  top: 132.5px;
+  top: 133px;
   width: 397px;
   z-index: 1;
 }
@@ -34,9 +34,9 @@ body {
   background: #fff;
   height: 403px;
   position: absolute;
-  left: 130px;
-  top: 131.5px;
-  width: 400px;
+  left: 129px;
+  top: 131px;
+  width: 402px;
   z-index: 0;
 }
 
