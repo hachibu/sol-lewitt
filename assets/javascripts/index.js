@@ -5,8 +5,16 @@ const createShapeElement = (shape) => {
   var inner = document.createElement('div');
   var border = document.createElement('div');
 
-  outer.classList += 'canvas stripes--horizontal';
-  inner.classList += `shape shape--${shape} stripes--vertical`;
+  var outerDir = 'horizontal';
+  var innerDir = 'vertical';
+
+  if (Math.random() < 0.5) {
+    outerDir = 'vertical';
+    innerDir = 'horizontal';
+  }
+
+  outer.classList += `canvas stripes--${outerDir}`;
+  inner.classList += `shape shape--${shape} stripes--${innerDir}`;
   border.classList += `shape--border shape--${shape}`;
 
   outer.appendChild(inner);
