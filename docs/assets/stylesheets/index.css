@@ -1,0 +1,112 @@
+:root {
+  --stripe-size: 6px;
+  --square-size: 700px;
+  --shape-size: 400px;
+  --border-size: 404px;
+}
+
+* { margin: 0; padding: 0; }
+
+body {
+  align-items: center;
+  background: #000;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.canvas {
+  border: 2px solid #fff;
+  display: flex;
+  height: var(--square-size);
+  justify-content: center;
+  position: relative;
+  width: var(--square-size);
+}
+
+.shape {
+  height: var(--shape-size);
+  position: absolute;
+  width: var(--shape-size);
+  top: 157px;
+  z-index: 1;
+}
+
+.shape--border {
+  top: 155px;
+  background: #fff;
+  height: var(--border-size);
+  position: absolute;
+  width: var(--border-size);
+  z-index: 0;
+}
+
+.shape--circle {
+  clip-path: circle(50% at 50% 50%);
+}
+
+.shape--decagon {
+  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+}
+
+.shape--hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.shape--heptagon {
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
+.shape--nonagon {
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+}
+
+.shape--octagon {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.shape--parallelogram {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.shape--pentagon {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.shape--rhombus {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.shape-square {
+  clip-path: inset(0 0 0 0);
+}
+
+.shape--trapazoid {
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.shape--triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.stripes--horizontal {
+  background: linear-gradient(
+    to bottom,
+    #000,
+    #000 80%,
+    #fff 20%,
+    #fff
+  );
+  background-size: 100% var(--stripe-size);
+}
+
+.stripes--vertical {
+  background: linear-gradient(
+    to left,
+    #000,
+    #000 80%,
+    #fff 20%,
+    #fff
+  );
+  background-size: var(--stripe-size) 100%;
+}
