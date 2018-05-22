@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
 
-* { margin: 0; padding: 0; }
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   align-items: center;
@@ -13,25 +16,26 @@ body {
 .canvas {
   border: 2px solid #fff;
   display: flex;
-  height: 648px;
-  justify-content: center;
+  height: 647px;
   position: relative;
   width: 648px;
 }
 
 .shape {
-  height: 400px;
+  height: 401px;
   position: absolute;
-  width: 397px;
+  left: 131.5px;
   top: 132.5px;
+  width: 397px;
   z-index: 1;
 }
 
 .shape--border {
-  top: 131px;
   background: #fff;
-  height: 402.5px;
+  height: 403px;
   position: absolute;
+  left: 130px;
+  top: 131.5px;
   width: 400px;
   z-index: 0;
 }
