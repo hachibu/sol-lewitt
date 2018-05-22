@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+
 :root {
   --stripe-size: 6px;
   --square-size: 700px;
@@ -109,4 +111,39 @@ body {
     #fff
   );
   background-size: var(--stripe-size) 100%;
+}
+
+header,
+footer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: 'IBM Plex Mono', monospace;
+  position: fixed;
+  z-index: 10;
+}
+
+header {
+  align-items: flex-start;
+  left: 25px;
+  top: 15px;
+}
+
+footer {
+  align-items: flex-end;
+  bottom: 15px;
+  right: 25px;
+}
+
+header a,
+footer a {
+  color: white;
+  font-size: 15px;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+header a:hover,
+footer a:hover {
+  text-decoration: line-through;
 }
