@@ -1,3 +1,3 @@
 # sol-lewitt
 
-An experiment to recreate Sol LeWitt's drawings in CSS.
+An homage to [Sol LeWitt](https://en.wikipedia.org/wiki/Sol_LeWitt) in CSS.
